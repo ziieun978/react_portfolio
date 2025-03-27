@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import HomeView from "./views/HomeView.jsx";
+import HomeView from "./views/HomeView";
 
 
 function App() {

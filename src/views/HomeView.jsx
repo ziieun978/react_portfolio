@@ -4,7 +4,7 @@ import Main from "../components/Main"
 import Inst from "../components/Inst"
 import Skill from "../components/Skill"
 import Nav from "../components/Nav"
-import Portfo from "../components/Portfo"
+import Portfo from "../components/Project"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
