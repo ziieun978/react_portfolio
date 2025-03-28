@@ -1,4 +1,25 @@
 import React from 'react'
+
+const HeaderNav = [
+  {
+    title: "inst",
+    url: "#inst"
+  },
+  {
+    title: "skill",
+    url: "#skill"
+  },
+  {
+    title: "project",
+    url: "#project"
+  },
+  {
+    title: "contact",
+    url: "contact"
+  
+  }
+];
+
 const Header = () => {
   return (
     <header id='header'>
