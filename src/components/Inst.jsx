@@ -4,7 +4,7 @@ import mainimg from '../assets/img/home.jpg';
 const Inst = () => {
   return (
     <section id='inst'>
-      <img src={mainimg} alt='backgroudImg'/>
+      {/* <img src={mainimg} alt='backgroudImg'/> */}
       <div className='inst_wrapper'>
         <h1 className='inst_title'>
           웹 개발하는 백지은입니다.

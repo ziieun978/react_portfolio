@@ -1,8 +1,15 @@
 import React from 'react'
+import ProjectCard from './ProjectCard'
 
 const Project = () => {
   return (
-    <div>Project</div>
+    <div className='project_wrapper'>
+      <div className='card_view'>
+        <ProjectCard />
+
+      </div>
+
+    </div>
   )
 }
 
