@@ -1,8 +1,28 @@
 import React from 'react'
+import html5 from '../assets/img/html5.png'
 
 const Skill = () => {
   return (
-    <div>Skill</div>
+    <div className='skillwrapper'>
+      <div className='skill-title'>
+        <h2>🍳기술 스택 및 도구</h2> 
+      </div>
+      <div className='skill-btn'>
+        <button className='btn'>프론트엔드</button>
+        <button className='btn'>라이브러리</button>
+        <button className='btn'>환경 및 배포</button>
+        <button className='btn'>디자인</button>
+      </div>
+
+      <div className='icons-grid'>
+        <div className='skill-icon'>
+          <img src={html5} alt='html5'/>
+
+        </div>
+
+      </div>
+
+    </div>
   )
 }
 
