@@ -1,0 +1,37 @@
+.contact_section {
+text-align: center;
+
+    .contact_box {
+        display: inline-block;
+        background-color: #A47764;
+        border-radius: 5%;
+        color: #fefefe;
+        font-weight: 500;
+        padding: 3rem;
+        
+    }
+    
+    .contact_box_text {
+
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        margin: 1rem;
+        .label {
+            text-align: left;
+            
+        }
+        .value {
+            text-align: right;
+
+            a {
+                color: #fefefe;
+            }
+        }
+    }
+
+
+
+
+
+}

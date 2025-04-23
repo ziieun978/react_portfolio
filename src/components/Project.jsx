@@ -1,11 +1,13 @@
 import React from 'react'
-import ProjectCard from './ProjectCard'
+import CardList from './Card/CardList'
+import {projectData} from '../data/ProjectData'
 
 const Project = () => {
   return (
     <div className='project_wrapper'>
+      <h3>프로젝트</h3>
       <div className='card_view'>
-        <ProjectCard />
+        <CardList carditem={projectData} />
 
       </div>
 

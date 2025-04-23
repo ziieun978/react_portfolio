@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CardItem from './CardItem';
+import CardItem from './Card/CardItem';
 import ProjectModal from'./ProjectModal';
 
 const projectData = [

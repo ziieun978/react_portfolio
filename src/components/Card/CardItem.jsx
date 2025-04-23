@@ -1,9 +1,9 @@
 import React from "react";
 
-function CardItem({ src, title, content, onClick }) {
+function CardItem({ img, title, content }) {
   return (
-    <li className="cardItem" onClick={onClick}> {/* 클릭 이벤트 추가 */}
-      <img className="cardImage" src={src} alt={title} loading="lazy" />
+    <li className="cardItem">
+      <img className="cardImage" src={img} alt={img} loading="lazy" />
       <div className="cardItemInfo">
         <h3 className="cardTitle">{title}</h3>
         <p className="cardContent">{content}</p>

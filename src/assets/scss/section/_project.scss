@@ -1,0 +1,34 @@
+.project_wrapper {
+    text-align: center;
+}
+.cardList {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  .cardItem {
+    background: #A47764;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease-in-out;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
+    .cardTitle {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  
+    .cardContent {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+}
