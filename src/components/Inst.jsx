@@ -1,5 +1,4 @@
 import React from 'react'
-import mainimg from '../assets/img/home.jpg';
 
 const Inst = () => {
   return (

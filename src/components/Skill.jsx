@@ -1,11 +1,10 @@
 import React from 'react'
-import html5 from '../assets/img/html5.png'
 
 const Skill = () => {
   return (
     <div className='skillwrapper'>
       <div className='skill-title'>
-        <h2>🍳기술 스택 및 도구</h2> 
+        <h2>기술 스택 및 도구</h2> 
       </div>
       <div className='skill-btn'>
         <button className='btn'>프론트엔드</button>
@@ -16,8 +15,7 @@ const Skill = () => {
 
       <div className='icons-grid'>
         <div className='skill-icon'>
-          <img src={html5} alt='html5'/>
-
+          
         </div>
 
       </div>

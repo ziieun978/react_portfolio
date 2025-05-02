@@ -1,34 +1,60 @@
-.project_wrapper {
-    text-align: center;
-}
-.cardList {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 40px;
+.projectCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
   }
-  
-  .cardItem {
-    background: #A47764;
-    border-radius: 12px;
-    padding: 20px;
-    color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease-in-out;
-  
-    &:hover {
-      transform: translateY(-5px);
+
+  .cardImage {
+    width: 30%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .cardContent {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 12px;
+  }
+
+  .stackIcons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+
+    .stackIcon {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
     }
-  
-    .cardTitle {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-  
-    .cardContent {
-      font-size: 0.95rem;
-      color: #ccc;
-      margin-bottom: 12px;
-    }
+  }
 }
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // 2열
+  gap: 24px;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // 모바일 대응
+  }
+}
+
