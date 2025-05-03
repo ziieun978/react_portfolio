@@ -2,7 +2,7 @@ import React from 'react'
 
 const Main = ({ children }) => {
   return (
-    <main id="main" role='main'>
+    <main id="main">
         {children}
     </main>
   )
