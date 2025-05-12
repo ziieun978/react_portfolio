@@ -1,11 +1,13 @@
-.footer_wrapper {
-    display: flex;
-    justify-content: center;
-    .footer_content {
-        font-size: 12px;
+    .footer_wrapper {
+        background: #0F172A;
+        color: #e2e8f0;
         display: flex;
         justify-content: center;
+        .footer_content {
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
 
-     
+        
+        }
     }
-}

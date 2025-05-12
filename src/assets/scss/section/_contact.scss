@@ -1,6 +1,12 @@
 .contact_section {
-text-align: center;
+    @include sectioncc;
+    text-align: center;
 
+    .contact_wrapper {
+        background :#0f172a;
+    }
+
+    
     .contact_box {
         display: inline-block;
         background-color: #2d333b;
@@ -29,9 +35,5 @@ text-align: center;
             }
         }
     }
-
-
-
-
 
 }
