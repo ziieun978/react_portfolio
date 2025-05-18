@@ -8,13 +8,20 @@
   .inst_wrapper {
     text-align: center;
 
+    .intro_label {
+      font-size: 1rem;
+      color: #38bdf8;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
     .inst_title {
       font-size: 3rem;
       font-weight: 700;
       color: #fefefe;
 
       .highlight {
-        color: #38bdf8; // 강조 색상
+        color: #38bdf8;
       }
     }
 
@@ -24,8 +31,15 @@
       color: #cbd5e1;
       line-height: 1.8;
     }
+
+    .intro_date {
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #64748b;
+    }
   }
 }
+
 @keyframes fadeUp {
   from {
     opacity: 0;
