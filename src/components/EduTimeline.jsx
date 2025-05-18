@@ -1,33 +1,51 @@
+import React from "react";
 import { educationTimeline } from "../data/EduTimelineData";
+import { FaGraduationCap } from "react-icons/fa";
+
 
 const EduTimeline = () => {
   return (
-    <section id="education" className="timeline_section">
-      <div className="section_wrapper">
-        <h2 className="section_title">📚 학력 및 교육</h2>
-        <ul className="timeline_list">
-          {educationTimeline.map(item => (
-            <li className="timeline_item" key={item.id}>
-              <div className="timeline_year">{item.year}</div>
-              <div className="timeline_content">
-                <h3>{item.title}</h3>
-                <p className="timeline_subtitle">{item.subtitle}</p>
-                <div className="timeline_stacks">
-                  {item.stacks.map((stack, index) => (
-                    <span key={index} className={`stack_icon ${stack}`}>{stack}</span>
+    <section className="education_section">
+      <div className="timeline_container">
+        {educationTimeline.map((item, index) => (
+          <div
+            key={item.id}
+            className={`timeline_item ${index % 2 === 0 ? "left" : "right"}`}
+          >
+            <div className="timeline_icon" title="졸업 아이콘">
+              <FaGraduationCap />
+            </div>
+            <div className="timeline_card" title={item.title}>
+              <p className="period">{item.period}</p>
+              <h3 className="title">{item.title}</h3>
+              <h4 className="subtitle">{item.subtitle}</h4>
+
+              {item.tags && (
+                <div className="tags">
+                  {item.tags.map((tag, idx) => (
+                    <span key={idx} className="badge">
+                      {tag}
+                    </span>
                   ))}
                 </div>
-                <ul className="timeline_details">
-                  {item.details.map((detail, idx) => (
-                    <li key={idx}>{detail}</li>
+              )}
+
+              <hr className="divider" />
+
+              {item.details && (
+                <ul className="details">
+                  {item.details.map((line, idx) => (
+                    <li key={idx}>{line}</li>
                   ))}
                 </ul>
-              </div>
-            </li>
-          ))}
-        </ul>
+              )}
+            </div>
+          </div>
+        ))}
+        <div className="timeline_line" />
       </div>
     </section>
   );
 };
+
 export default EduTimeline;
