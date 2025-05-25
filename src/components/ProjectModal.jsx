@@ -1,81 +1,107 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const ProjectModal = ({ onClose }) => {
+const ProjectModal = ({ onClose, project }) => {
+  const {
+    title,
+    description,
+    stacks,
+    period,
+    members,
+    link,
+    github,
+    details,
+    images,
+  } = project;
+
+  // 스크롤 잠금
+    useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
+  if (!project) return null;
+
+
   return (
-    <div className="modalOverlay">
-      <div className="modalContent">
-        <button className="modalClose" onClick={onClose}>
-          &times;
-        </button>
+    <div className="modalOverlay" onClick={onClose}>
+      <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+        <button className="modalClose" onClick={onClose}>&times;</button>
 
-        <p className="projectDesc">
-          나의 포트폴리오와 사이트 제작 프로젝트<br />
-          데이터를 분리하여 관리하며 빌드 시점에 렌더링하는 SSG 웹 제작
-        </p>
+        {/* 헤더 영역 */}
+        <section className="modalHeader">
+          <h3 className="modalTitle">{title}</h3>
+          <h4>프로젝트 설명</h4>
+          <p className="projectDesc">{description}</p>
+        </section>
 
-        <div className="techStacks">
-          <span className="stack">Next.js</span>
-          <span className="stack">TypeScript</span>
-          <span className="stack">Tailwind CSS</span>
-          <span className="stack">Vercel</span>
-        </div>
+        {/* 스택 아이콘 / 텍스트 */}
+        <h4>기술스택</h4>
+        {stacks?.length > 0 && (
+          <section className="techStacks">
+            {stacks.map((stack, index) =>
+              typeof stack === 'string' && stack.startsWith('/') ? (
+                <img key={index} src={stack} alt={`stack-${index}`} className="stackIcon" />
+              ) : (
+                <span className="stackText" key={index}>{stack}</span>
+              )
+            )}
+          </section>
+        )}
 
+        {/* 링크 및 정보 */}
+        <section className="projectLinks">
+          <div><strong>📅 기간:</strong> {period}</div>
+          <div><strong>👥 인원:</strong> {members}</div>
+          <div className="linkButtons">
+            {link && (
+              <a href={link} target="_blank" rel="noopener noreferrer" className="linkButton">
+                🔗 사이트 바로가기
+              </a>
+            )}
+            {github && (
+              <a href={github} target="_blank" rel="noopener noreferrer" className="linkButton">
+                💻 GitHub 저장소
+              </a>
+            )}
+          </div>
+        </section>
 
-        <div className="projectLinks">
-          <div><strong>기간</strong> 2023.12 ~ </div>
-          <div><strong>인원</strong> 1명</div>
-          <a href="https://your-site.com" target="_blank" rel="noopener noreferrer">
-            🔗 사이트 바로가기
-          </a>
-          <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">
-            💻 GitHub 저장소
-          </a>
-        </div>
-                <div className="detailSection">
-          <h4>상세 내용</h4>
-          <ol>
-            <li>
-              <strong>Next.js의 app router 활용한 SSG 웹 제작</strong>
-              <ul>
-                <li>Server Component로 SSG 방식의 웹 제작</li>
-                <li>Intercept Routes 기능으로 공유형 주소를 갖는 Modal 페이지 구현</li>
-              </ul>
-              <div className="exampleImages">
-                <img
-                  src="/images/android.png"
-                  alt="Vercel 배포 예시"
-                  className="exampleImage"
-                />
-                <div className="responsiveImages">
-                  <img
-                    src="/images/responsive-light.png"
-                    alt="반응형 라이트모드 예시"
-                    className="exampleImage"
-                  />
-                  <img
-                    src="/images/responsive-dark.png"
-                    alt="반응형 다크모드 예시"
-                    className="exampleImage"
-                  />
-                </div>
+        {/* 이미지 섹션 */}
+        {images && images.length > 0 && (
+          <section className="exampleImages">
+            {images.length === 1 ? (
+              <img src={images[0]} alt="example" className="exampleImage fullImage" />
+            ) : (
+              <div className="responsiveImages">
+                {images.map((imgSrc, i) => (
+                  <img key={i} src={imgSrc} alt={`example-${i}`} className="exampleImage halfImage" />
+                ))}
               </div>
-            </li>
-            <li>
-              <strong>Vercel 이용하여 배포</strong>
-              <ul>
-                <li>Vercel PostgreSQL 연결, 데이터 분리하여 관리</li>
-                <li>Prisma를 사용하여 DB 클라이언트 연동, 데이터 스키마 맞춰 타입 생성</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Tailwind CSS 사용</strong>
-              <ul>
-                <li>다크모드 대응</li>
-                <li>반응형 대응 (375 / 640 / 768px ~)</li>
-              </ul>
-            </li>
-          </ol>
-        </div>
+            )}
+          </section>
+        )}
+          {/* 상세 내용 */}
+          <section className="detailSection">
+            <h3 className="sectionTitle">상세 내용</h3>
+            <ol className="detailList">
+              {details.map((item, index) =>
+                typeof item === 'string' ? (
+                  <li key={index}>{item}</li>
+                ) : (
+                  <li key={index}>
+                    <strong>{item.title}</strong>
+                    <ul>
+                      {item.subItems.map((sub, subIdx) => (
+                        <li key={subIdx}>{sub}</li>
+                      ))}
+                    </ul>
+                  </li>
+                )
+              )}
+            </ol>
+          </section>
       </div>
     </div>
   );
