@@ -83,25 +83,41 @@ const ProjectModal = ({ onClose, project }) => {
           </section>
         )}
           {/* 상세 내용 */}
-          <section className="detailSection">
-            <h3 className="sectionTitle">상세 내용</h3>
-            <ol className="detailList">
-              {details.map((item, index) =>
-                typeof item === 'string' ? (
-                  <li key={index}>{item}</li>
-                ) : (
-                  <li key={index}>
-                    <strong>{item.title}</strong>
-                    <ul>
-                      {item.subItems.map((sub, subIdx) => (
-                        <li key={subIdx}>{sub}</li>
-                      ))}
-                    </ul>
-                  </li>
-                )
-              )}
-            </ol>
-          </section>
+        <section className="detailSection">
+          <h3 className="sectionTitle">상세 내용</h3>
+          <ol className="detailList">
+            {details.map((item, index) => (
+              <li key={index}>
+                <strong>{item.title}</strong>
+
+                {/* desc가 배열일 때 */}
+                {item.desc && Array.isArray(item.desc) && (
+                  <ul>
+                    {item.desc.map((descItem, i) => (
+                      <li key={i}>{descItem}</li>
+                    ))}
+                  </ul>
+                )}
+
+                {/* desc가 문자열일 때 */}
+                {item.desc && typeof item.desc === 'string' && (
+                  <ul>
+                    <li>{item.desc}</li>
+                  </ul>
+                )}
+
+                {/* 이미지가 있을 경우만 출력 */}
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={`detail-${index}`}
+                    className="descImage"
+                  />
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
       </div>
     </div>
   );
