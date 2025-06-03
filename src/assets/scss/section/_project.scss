@@ -36,10 +36,10 @@
   transition: transform 0.2s ease;
 
   img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 200px;
     object-fit: contain;
-    margin-bottom: 12px;
+    margin-bottom: 1rem;
   }
 
   h3 {
@@ -89,7 +89,6 @@
   width: 100%;
   max-width: 700px;
   max-height: 80vh;
-  padding: 2rem;
   overflow-y: auto; 
   border-radius: 1rem;
   position: relative;
@@ -237,6 +236,10 @@ font-size: 14px;
       width: 48%;
     }
   }
+}
+.descImage {
+  max-width: 600px;
+
 }
 
 @media (max-width: 640px) {

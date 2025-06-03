@@ -88,7 +88,11 @@ const ProjectModal = ({ onClose, project }) => {
           <ol className="detailList">
             {details.map((item, index) => (
               <li key={index}>
-                <strong>{item.title}</strong>
+                {Array.isArray(item.title) ? (
+                  item.title.map((t,i) => <strong key={i}>{t}</strong>)
+                ) : (
+                  <strong>{item.title}</strong>
+                )}
 
                 {/* desc가 배열일 때 */}
                 {item.desc && Array.isArray(item.desc) && (

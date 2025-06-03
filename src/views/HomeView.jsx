@@ -16,8 +16,8 @@ const HomeView = () => {
         <Main>
             <Inst />
             <Skill />
-            <Edu />
             <Portfo />      
+            <Edu />
             <Contact />
         </Main>
         <Footer />
