@@ -69,6 +69,7 @@ const ProjectModal = ({ onClose, project }) => {
         </section>
 
         {/* 이미지 섹션 */}
+        <h3>VIEW</h3>
         {images && images.length > 0 && (
           <section className="exampleImages">
             {images.length === 1 ? (
