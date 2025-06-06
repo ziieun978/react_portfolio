@@ -42,7 +42,7 @@ function ProjectCard() {
             {/*  라벨 추가 */}
             <span className="projectLabel solo">개인 학습</span>
 
-            <img src={project.thumbnail} alt={project.title} className="projectThumb" />
+            {project.thumbnail && ( <img src={project.thumbnail} alt={project.title} className="projectThumb" /> )}
             <h3>{project.title}</h3>
             <p>{project.shortDesc}</p>
             <div className="stackIcons">

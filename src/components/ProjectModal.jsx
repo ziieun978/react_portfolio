@@ -52,8 +52,8 @@ const ProjectModal = ({ onClose, project }) => {
 
         {/* 링크 및 정보 */}
         <section className="projectLinks">
-          <div><strong>📅 기간:</strong> {period}</div>
-          <div><strong>👥 인원:</strong> {members}</div>
+          {period && ( <div><strong>📅 기간:</strong> {period}</div> )}
+          {members && ( <div><strong>👥 인원:</strong> {members}</div> )}
           <div className="linkButtons">
             {link && (
               <a href={link} target="_blank" rel="noopener noreferrer" className="linkButton">
