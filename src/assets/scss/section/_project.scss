@@ -22,7 +22,7 @@
 
 .projectCard {
   width: 300px;
-  background: #fff;
+  background: #F5F7FA;
   border-radius: 12px;
   padding: 20px 16px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
@@ -64,6 +64,10 @@
     font-size: 1rem;
     margin: 8px 0;
     font-weight: bold;
+    color: #6B7280;
+  }
+  p {
+    color: #6B7280;
   }
 
   .desc {
@@ -199,7 +203,7 @@ font-size: 14px;
   }
 
   .linkButton {
-    background-color: #2563eb;
+    background-color: #6366F1;
     color: white;
     padding: 0.4rem 0.75rem;
     border-radius: 0.5rem;
@@ -207,7 +211,7 @@ font-size: 14px;
     text-decoration: none;
 
     &:hover {
-      background-color: #1d4ed8;
+      background-color: #4F46E5;
     }
   }
 }

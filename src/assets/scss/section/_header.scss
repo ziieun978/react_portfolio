@@ -3,11 +3,15 @@
 #header {
      @include position-fixed;
      z-index: 1000;
+     
 }
 
 .header_wrapper {
     @include flex-between;
-    @include backgroundcc;
+    background-color: #1E293B;
+    color: #F5F5F5;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
     
 
     

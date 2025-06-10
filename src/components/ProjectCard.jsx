@@ -8,7 +8,7 @@ function ProjectCard() {
 
   return (
     <section className="projectSection">
-      <h2>프로젝트</h2>
+      <h2> 프로젝트</h2>
       <div className="projectGrid">
         {projectData.map((project) => (
           <div
@@ -31,7 +31,7 @@ function ProjectCard() {
         ))}
       </div>
 
-      <h2>개인 프로젝트</h2>
+      <h2>개인 학습</h2>
       <div className="projectGrid">
         {soloProjects.map((project) => (
           <div
