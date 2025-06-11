@@ -15,7 +15,7 @@ const HeaderNav = [
   },
   {
     title: "contact",
-    url: "contact"
+    url: "#contact"
   
   }
 ];

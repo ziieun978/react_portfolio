@@ -1,5 +1,5 @@
 .skillSection {
-    color: white;
+    color: #0F172A;
     text-align: center;
     padding: 50px 20px;
     display: flex;
@@ -10,7 +10,7 @@
     margin: 0 auto;
 
     .section_title {
-        color: #58a6ff;
+        color: #0F172A;
         font-size: 40px;
     }
 
@@ -26,23 +26,23 @@
         margin-bottom: 20px;
 
         .tab {
-            background: #1a1f26;
+            background: #0F172A;
             border: none;
             padding: 10px 20px;
             border-radius: 15px;
-            color: white;
+            color: #F1F1E6;
             cursor: pointer;
             font-size: 14px;
             transition: 0.3s ease-in-out;
 
             &.active {
-                background: white;
-                color: aquamarine;
+                background: #a9aabc;
+                color: #0F172A;
                 font-weight: bold;
             }
 
             &:hover {
-                background: springgreen;
+                background: #444655;
             }
 
         }

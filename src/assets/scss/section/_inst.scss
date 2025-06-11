@@ -1,11 +1,12 @@
 .intro_section {
-  @include sectioncc;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-
+  background-color: #f2f2f2;
+  
   .inst_wrapper {
+    @include sectioncc;
     text-align: center;
 
     .intro_label {
@@ -21,14 +22,14 @@
       color: #0F172A;
 
       .highlight {
-        color: #38bdf8;
+        color: #46658c;
       }
     }
 
     .inst_content {
       margin-top: 1.5rem;
       font-size: 1.25rem;
-      color: #cbd5e1;
+      color: #0F172A;
       line-height: 1.8;
     }
 

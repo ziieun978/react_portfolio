@@ -7,7 +7,7 @@ function ProjectCard() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section className="projectSection">
+    <section className="projectSection" id="project">
       <h2> 프로젝트</h2>
       <div className="projectGrid">
         {projectData.map((project) => (
