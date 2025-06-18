@@ -9,6 +9,7 @@ function ProjectCard() {
   return (
     <section className="projectSection" id="project">
       <h2> 프로젝트</h2>
+      <h3>프로젝트의 세부내용을 확인할 수 있습니다.</h3>
       <div className="projectGrid">
         {projectData.map((project) => (
           <div
@@ -32,6 +33,7 @@ function ProjectCard() {
       </div>
 
       <h2>개인 학습</h2>
+      <h3>세부내용을 확인할 수 있습니다.</h3>
       <div className="projectGrid">
         {soloProjects.map((project) => (
           <div

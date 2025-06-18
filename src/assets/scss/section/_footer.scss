@@ -1,15 +1,17 @@
     .footer_wrapper {
-        width: 100vw;
-        background: #0F172A;
-        color: #0F172A;
+        width: 100%;
+        background: #1e293b;
+        color: #e2e8f0;
         display: flex;
         justify-content: center;
+        padding: 1.5rem 0;
 
         .footer_content {
-            font-size: 12px;
+            font-size: 0.8rem;
             display: flex;
-            justify-content: center;
-
-        
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            text-align: center;
         }
     }

@@ -5,7 +5,8 @@ const Contact = () => {
     <section className='contact_section' id='contact'>
       <div className='contact_wrapper'>
         <div className='contact_text'>
-          <h2>감사합니다</h2>
+          <h2>함께 봐주셔서 감사합니다.</h2>
+          <h3>더 궁금한 점은 언제든 연락주세요.</h3>
         </div>
         <div className='contact_box'>
           <div className='contact_box_text'>

@@ -8,17 +8,23 @@
 
   h2 {
     color: #0F172A;
-    font-size: 40px;
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    color: #0F172A;
+    font-weight: 300;
   }
 }
 
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // 2열 고정
-  gap: 40px;
+  gap: 24px;
   max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 5rem;
+  justify-content: center;
 }
 
 .projectCard {
@@ -57,7 +63,7 @@
   img {
     width: 100%;
     height: 200px;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 1rem;
   }
 
