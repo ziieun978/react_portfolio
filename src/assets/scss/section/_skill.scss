@@ -76,8 +76,8 @@
             
         }
         
-        .skill_card.hidden {
-            opacity: 0;
+        .skill_card.dimmed {
+            opacity: 0.1;
             pointer-events: none;
             position: relative;
         }

@@ -39,7 +39,7 @@ const skill = forwardRef((props, ref) => {
         {allSkills.map((skill) => (
           <div 
             key={skill.id} 
-            className={`skill_card ${isVisible(skill.id) ? 'visible' : 'hidden'}`}
+            className={`skill_card ${isVisible(skill.id) ? 'visible' : 'dimmed'}`}
           > 
             <img 
               src={skill.src} 

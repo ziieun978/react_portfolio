@@ -10,26 +10,26 @@ const EduTimeline = () => {
         {educationTimeline.map((item) => (
           <div key={item.id} className="edu_item">
             <div className="edu_period">{item.year}</div>
-            <div className="edu_info">
-              <h3>{item.title}</h3>
-              {item.subtitle && <h4>{item.subtitle}</h4>}
+              <div className="edu_info">
+                <h3>{item.title}</h3>
+                {item.subtitle && <h4>{item.subtitle}</h4>}
 
-              {item.stacks && (
-                <div className="edu_tags">
-                  {item.stacks.map((tag, i) => (
-                    <span className="edu_badge" key={i}>{tag}</span>
-                  ))}
-                </div>
-              )}
+                {item.stacks && (
+                  <div className="edu_tags">
+                    {item.stacks.map((tag, i) => (
+                      <span className="edu_badge" key={i}>{tag}</span>
+                    ))}
+                  </div>
+                )}
 
-              {item.details && (
-                <ul className="edu_details">
-                  {item.details.map((line, i) => (
-                    <li key={i}>{line}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
+                {item.details && (
+                  <ul className="edu_details">
+                    {item.details.map((line, i) => (
+                      <li key={i}>{line}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
           </div>
         ))}
       </div>
