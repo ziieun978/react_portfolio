@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Header from "../components/Header"
 import Main from "../components/Main"
 import Inst from "../components/Inst"
@@ -10,15 +10,24 @@ import Footer from "../components/Footer"
 
 // rafce
 const HomeView = () => {
+  const handleInstScroll = () => {
+    const el = document.getElementById('inst');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
-        <Header />
+        <Header
+        onInstClick={handleInstScroll}
+        />
         <Main>
-            <Inst />
-            <Skill />
-            <Portfo />      
+            <Inst/>
+            <Skill/>
+            <Portfo/>      
             <Edu />
-            <Contact />
+            <Contact/>
         </Main>
         <Footer />
     </div>

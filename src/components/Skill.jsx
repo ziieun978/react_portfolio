@@ -19,7 +19,7 @@ const skill = forwardRef((props, ref) => {
   };
 
   return (
-    <section className='skillSection' ref={ref} id='skill'>
+    <section className='skillSection' id='skill' ref={ref} >
       <h2 className='section_title'>기술스킬</h2>
       <p className='section_subtitle'>사용할 수 있는 기술목록입니다.</p>
 

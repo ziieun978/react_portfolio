@@ -15,6 +15,7 @@
     color: #0F172A;
     font-weight: 300;
   }
+
 }
 
 .projectGrid {
@@ -38,6 +39,7 @@
   align-items: center;
   text-align: center;
   transition: transform 0.2s ease;
+  margin-bottom: 5rem;
 
   .projectLabel {
     position: absolute;
@@ -269,6 +271,10 @@ font-size: 14px;
 }
 .descImage {
   max-width: 600px;
+}
+
+section + section {
+    margin-top: 120px;
 }
 
 @media (max-width: 640px) {

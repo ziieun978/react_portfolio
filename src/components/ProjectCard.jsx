@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import { projectData } from "../data/ProjectData";
 import ProjectModal from "./ProjectModal";
 import { soloProjects } from "../data/ProjectData";
 
-function ProjectCard() {
+const ProjectCard = forwardRef((props, ref) => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [scrollY, setScrollY] = useState(0);
+  
+    useEffect(() => {
+      const handleScroll = () => setScrollY(window.scrollY);
+      window.addEventListener('scroll', handleScroll);
+      return () =>
+        window.removeEventListener('scroll', handleScroll)},[]);
+  
+      
 
   return (
-    <section className="projectSection" id="project">
+    <section className="projectSection" id="project" ref={ref}>
       <h2> 프로젝트</h2>
       <h3>프로젝트의 세부내용을 확인할 수 있습니다.</h3>
       <div className="projectGrid">
@@ -66,6 +75,7 @@ function ProjectCard() {
       )}
     </section>
   );
-}
+});
+
 
 export default ProjectCard;

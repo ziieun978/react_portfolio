@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { forwardRef, useEffect, useState } from 'react'
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
+  const [scrollY, setScrollY] = useState(0);
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () =>
+      window.removeEventListener('scroll', handleScroll)},[]);
+
+    
   return (
-    <section className='contact_section' id='contact'>
+    <section className='contact_section' id='contact' ref={ref}>
       <div className='contact_wrapper'>
         <div className='contact_text'>
           <h2>함께 봐주셔서 감사합니다.</h2>
@@ -27,7 +37,8 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+});
+
 
 export default Contact
