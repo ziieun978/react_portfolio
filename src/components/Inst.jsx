@@ -1,6 +1,6 @@
 import React, { forwardRef, useEffect, useState } from 'react'
 import { Typewriter } from 'react-simple-typewriter';
-
+import brimg from '../assets/img/br_crou.jpg'
 
 const Inst = forwardRef((props, ref) => {
   const [scrollY, setScrollY] = useState(0);
@@ -14,6 +14,7 @@ const Inst = forwardRef((props, ref) => {
 
   return (
     <section className="intro_section" id="inst" ref={ref}>
+      <img src={brimg} alt='brimg' className='brimg' />
       <div className="inst_wrapper">
         <div className="inst_title">
           안녕하세요 
