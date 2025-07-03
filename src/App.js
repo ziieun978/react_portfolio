@@ -5,7 +5,7 @@ import HomeView from "./views/HomeView";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<HomeView />} />
       </Routes>
