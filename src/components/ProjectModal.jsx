@@ -7,6 +7,7 @@ const ProjectModal = ({ onClose, project }) => {
     stacks,
     period,
     members,
+    role,
     link,
     github,
     details,
@@ -54,6 +55,15 @@ const ProjectModal = ({ onClose, project }) => {
         <section className="projectLinks">
           {period && ( <div><strong>📅 기간:</strong> {period}</div> )}
           {members && ( <div><strong>👥 인원:</strong> {members}</div> )}
+          {role && ( 
+            <div className='role'><strong>🙌 역할:</strong>
+              <ul>
+                {role.map((item,index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div className="linkButtons">
             {link && (
               <a href={link} target="_blank" rel="noopener noreferrer" className="linkButton">
@@ -69,6 +79,7 @@ const ProjectModal = ({ onClose, project }) => {
         </section>
 
         {/* 이미지 섹션 */}
+        <hr className='section_line' />
         <h3>VIEW</h3>
         {images && images.length > 0 && (
           <section className="exampleImages">
