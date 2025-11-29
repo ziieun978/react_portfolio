@@ -87,11 +87,11 @@ npm run deploy
 ```
 ### 📌 업데이트 예정 (To Do)
 
-다크 모드 추가
+-다크 모드 추가
+-
+### 🧑‍💻 제작자
 
-###🧑‍💻 제작자
-
-백지은
+**백지은**
 🔗 GitHub: https://github.com/ziieun978
 
 📧 Email: uzzz7899@gmail.com
