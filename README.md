@@ -51,7 +51,7 @@ https://ziieun978.github.io/react_portfolio<br><br>
  ├── styles/           # SCSS 스타일
  ├── App.jsx
  └── index.jsx
-
+```
 ## 🧩 주요 섹션 소개
 
 ### 🏁 Intro
@@ -76,7 +76,7 @@ https://ziieun978.github.io/react_portfolio<br><br>
 
 ## 🔧 설치 및 실행
 
-``bash
+```bash
 git clone https://github.com/ziieun978/react_portfolio.git
 cd your-portfolio
 npm install
@@ -84,7 +84,7 @@ npm start
 
 🚀 배포 방법 (GitHub Pages)
 npm run deploy
-
+```
 ### 📌 업데이트 예정 (To Do)
 
 다크 모드 추가
