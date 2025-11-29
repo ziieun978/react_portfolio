@@ -89,7 +89,7 @@ npm run deploy
 
 다크 모드 추가
 
-## 🧑‍💻 제작자
+###🧑‍💻 제작자
 
 백지은
 🔗 GitHub: https://github.com/ziieun978
