@@ -86,7 +86,7 @@ npm run deploy
 ### 📌 업데이트 예정 (To Do)
 
 -다크 모드 추가
--Desktop · Tablet · Mobile 전 기기 대응 수중
+-Desktop · Tablet · Mobile 전 기기 대응 수정중
 ### 🧑‍💻 제작자
 
 **백지은** <br>
