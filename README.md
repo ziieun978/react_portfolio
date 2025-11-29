@@ -91,7 +91,7 @@ npm run deploy
 -
 ### 🧑‍💻 제작자
 
-**백지은**
--🔗 GitHub: https://github.com/ziieun978
+**백지은** <br>
+🔗 GitHub: https://github.com/ziieun978
 
--📧 Email: uzzz7899@gmail.com
+📧 Email: uzzz7899@gmail.com
