@@ -25,7 +25,7 @@ https://ziieun978.github.io/react_portfolio<br><br>
 
 ---
 
-## 🛠 기술 스택 (Tech Stack)
+## 🛠 기술 스택
 
 ### Frontend
 - React  
@@ -40,9 +40,10 @@ https://ziieun978.github.io/react_portfolio<br><br>
 <br>
 
 ---
-
-## 📁 폴더 구조 (Directory Structure)
-src/
+## 📂 프로젝트 구조
+```bash
+📦 portfolio
+ src/
  ├── assets/           # 이미지 및 리소스
  ├── components/       # 재사용 컴포넌트
  ├── data/             # 프로젝트/학력/스킬 데이터
