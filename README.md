@@ -20,8 +20,6 @@ https://ziieun978.github.io/react_portfolio<br><br>
 - 프로젝트·학력·스킬 정보를 별도 JSON 객체로 관리
 - 유지보수 용이 & 데이터 변경 시 자동 반영
 
-### 📱 반응형 디자인
-- Desktop · Tablet · Mobile 전 기기 대응<br><br>
 
 ---
 
@@ -88,7 +86,7 @@ npm run deploy
 ### 📌 업데이트 예정 (To Do)
 
 -다크 모드 추가
--
+-Desktop · Tablet · Mobile 전 기기 대응 수중
 ### 🧑‍💻 제작자
 
 **백지은** <br>
